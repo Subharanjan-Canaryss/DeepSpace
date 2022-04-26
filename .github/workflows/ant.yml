@@ -43,4 +43,8 @@ jobs:
         with:
           name: Deepspace-artifact
           path: C:\Users\subharanjano\Deepspace
+          
+      - name: deploy to tomcat
+        run: | 
+         xcopy C:\Users\subharanjano\Deepspace  "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps" /Y
       
