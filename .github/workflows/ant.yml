@@ -25,9 +25,7 @@ jobs:
     
     - name: Build with Maven
       run: mvn -B package --file ${{github.workspace}}/pom.xml
-    - run: |
-       cd ${{github.workspace}}/DeepSpace
-       ls
+
        
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.3.1
