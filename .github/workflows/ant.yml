@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v2.3.1
       with:
        name: Deepspace-artifact
-       path: ${{github.workspace}}/DeepSpace/target/*.war
+       path: ${{github.workspace}}/target/*.war
   Deploy:
     name: On Prem Deploy
    
