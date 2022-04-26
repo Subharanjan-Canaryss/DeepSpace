@@ -32,3 +32,18 @@ jobs:
       with:
        name: Deepspace-artifact
        path: ${{github.workspace}}/DeepSpace/target/*.war
+  Deploy:
+    name: On Prem Deploy
+   
+    runs-on: sro-runner
+    needs: build 
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.0
+        with:
+          name: Deepspace-artifact
+
+          path: C:\Users\subharanjano\Deepspace
+      - name: deploy to tomcat
+        run: | 
+         xcopy C:\Users\subharanjano\Deepspace  "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps" /Y
