@@ -24,7 +24,7 @@ jobs:
         distribution: 'adopt'
     
     - name: Build with Maven
-      run: mvn -B package --file ${{github.workspace}}/DeepSpace/pom.xml
+      run: mvn -B package --file ${{github.workspace}}/pom.xml
     - run: |
        cd ${{github.workspace}}/DeepSpace
        ls
