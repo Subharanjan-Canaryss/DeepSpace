@@ -28,7 +28,7 @@ jobs:
 
        
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3.0.0
+      uses: actions/upload-artifact@v1.0.0
       with:
        name: Deepspace-artifact
        path: ${{github.workspace}}/DeepSpace/target/*.war
