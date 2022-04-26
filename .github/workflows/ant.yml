@@ -23,7 +23,7 @@ jobs:
         java-version: 1.8
     
     - name: Build with Maven
-      run: ${{github.workspace}}/DeepSpace/pom.xml
+      run: ${{github.workspace}}/pom.xml
       
     - run: |
        cd ${{github.workspace}}/DeepSpace
