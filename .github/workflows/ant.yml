@@ -25,7 +25,8 @@ jobs:
     
     - name: Build with Maven
       run: mvn -B package --file ${{github.workspace}}/pom.xml
-
+#Apache Maven to publish packages to GitHub Packages and to use packages stored on GitHub Packages 
+#as dependencies in a Java project.
        
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
